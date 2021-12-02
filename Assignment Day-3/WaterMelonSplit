@@ -1,0 +1,30 @@
+package intellect.naveenkumar;
+
+import java.util.Scanner;
+
+public class WaterMelonSplit {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);  
+		System.out.print("Enter Weight Of Watermelon -> ");  
+		int watermelonweight=sc.nextInt(); 
+		int j=watermelonweight;
+		if(watermelonweight%2==0)
+		{
+			int equal=watermelonweight/2;
+			System.out.println("I get "+equal+"kgs and my sibilings get "+equal+"kgs");
+		}
+		else
+		{
+			System.out.println("Sorry, you cannot purchase");
+		}
+		for(int i=1;i<watermelonweight;i++)
+		{
+			System.out.println(" "+i+" "+--j);
+		}
+		System.out.println("Posibile Combination is "+(watermelonweight-1));
+
+	}
+
+}
+

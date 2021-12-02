@@ -1,0 +1,28 @@
+package intellect.naveenkumar;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Target {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);  
+		System.out.print("Enter Target -> ");  
+		int target=sc.nextInt();  
+		int[] turns = new int[10];  
+		int i;
+
+		for(i=1; i<=10; i++)  
+		{
+			System.out.print("Enter the Point -> ");
+			turns[i]=sc.nextInt();
+			int sum = Arrays.stream(turns).sum(); //array sum
+			if(sum>=target) //check sum greater than target
+				break; //exit for loop
+		}
+		System.out.println("Total Turns ->"+i);
+
+	}
+
+}
+

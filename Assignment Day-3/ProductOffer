@@ -1,0 +1,35 @@
+package intellect.naveenkumar;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class ProductOffer {
+
+	public static void main(String[] args) {
+		
+		//input part
+		Scanner sc=new Scanner(System.in);  
+		System.out.print("Enter the number of products -> ");  
+		int n=sc.nextInt();  
+		int[] products = new int[n];  
+
+		for(int i=0; i<n; i++)  
+		{
+			System.out.print("Enter the Product "+i+" Price -> ");
+			products[i]=sc.nextInt();  
+		}
+
+		//logical part
+		int sum = Arrays.stream(products).sum(); //arraysum
+		Arrays.sort(products); //arraysort
+		float minimum=products[0]; //smallest element
+		float offer20=(float) (sum*0.2); //20% offer
+		
+		System.out.println("*** Offer 1 is "+offer20+" *** Your Current Total ->"+(sum-offer20));
+		System.out.println("*** Offer 2 is "+minimum+" *** Your Current Total ->"+(sum-minimum));
+		
+
+	}
+
+}
+
