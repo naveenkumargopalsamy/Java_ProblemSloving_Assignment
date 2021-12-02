@@ -1,0 +1,24 @@
+package intellect.naveenkumar;
+
+import java.util.Scanner;
+
+public class Bonus {
+	static int n,a=3;
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		n=sc.nextInt();
+		for(int i=1;i<n;i++)
+		{
+			a=a*3;
+			System.out.print((a)+" ");
+		}
+		
+		
+
+	}
+
+}
+
+6
+9 27 81 243 729 
+
