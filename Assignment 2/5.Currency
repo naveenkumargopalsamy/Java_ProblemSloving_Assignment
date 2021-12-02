@@ -1,0 +1,43 @@
+package intellect.naveenkumar;
+
+import java.util.Scanner;
+
+
+public class Currency {
+
+	public static void main(String argc[]){ 
+		int[] change={ 100, 50,10, 5, 2, 1}; 
+		int[] total_notes = new int[change.length]; 
+		int sum = 0;
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter Total Currency:");
+		int currency = sc.nextInt();
+		try
+		{
+
+			if (currency > 0) {
+
+				for (int i = 0; i < change.length; i++) { 
+					total_notes[i] = currency / change[i]; 
+					currency = currency - total_notes[i] * change[i];
+				} 
+
+				for (int i = 0; i < change.length; i++) 	
+					sum=total_notes[i]+sum;
+
+				System.out.println("Count ="+sum);
+			}
+			else if(currency < 0)
+			{
+				throw new Exception("Currency is Negative");
+			}
+
+
+		}
+		catch (Exception e) {
+			System.out.println(e);
+		}
+	} 
+
+}
+

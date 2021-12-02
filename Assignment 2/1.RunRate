@@ -1,0 +1,29 @@
+package intellect.naveenkumar;
+
+import java.util.Scanner;
+
+public class Run_Rate {
+
+	public static void main(String[] args) {
+
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter Number Of Overs:");
+		int total_overs = sc.nextInt();
+		System.out.print("Enter Total Runs:");
+		int total_runs = sc.nextInt();
+		System.out.print("Enter No Of Overs Bowled:");
+		int no_of_overbowled = sc.nextInt();
+		System.out.print("Enter No Runs Scored So Far:");
+		int runs_so_far = sc.nextInt();
+		//logic part
+		float current_runrate=runs_so_far/no_of_overbowled;
+		System.out.println("Current Run Rate"+current_runrate);
+		float required_runrate=(float)(total_runs-runs_so_far)/(float)(total_overs-no_of_overbowled);
+		System.out.printf("Required Run Rate %.2f",+required_runrate);
+
+
+
+	}
+
+}
+

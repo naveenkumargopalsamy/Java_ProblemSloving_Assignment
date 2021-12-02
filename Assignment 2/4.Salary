@@ -1,0 +1,18 @@
+package intellect.naveenkumar;
+
+import java.util.Scanner;
+
+public class Salary {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter Total Salary Paid:");
+		int salary = sc.nextInt();
+		int weekend=(salary-800)/130;
+		int weekdays=10+weekend;
+		System.out.println("Number Of Weekdays hours is "+weekdays);
+		System.out.println("Number OF WeekEnd hours is"+weekend);
+	}
+
+}
+

@@ -1,0 +1,19 @@
+package intellect.naveenkumar;
+
+import java.util.Scanner;
+
+public class LuckyDraw1 {
+	public static void main(String[] args) {
+
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter Purchased Date:");
+		int purchasedate = sc.nextInt();
+		System.out.print("Enter Bill Number:");
+		int billnumber = sc.nextInt();
+		if((purchasedate==billnumber%100) || (purchasedate==billnumber%10) && billnumber%purchasedate==0)
+			System.out.println("Congrats, Lucky Draw !!!!!!");
+		else
+			System.out.println("Sorry, Not A Lucky Draw !!!!!!");
+	}
+}
+

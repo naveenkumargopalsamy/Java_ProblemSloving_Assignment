@@ -1,0 +1,45 @@
+package intellect.naveenkumar;
+
+import java.util.Scanner;
+
+public class Expenses {
+
+	public static void main(String[] args) {
+
+		//input part
+
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter Branding Expense:");
+		int brand_expense = sc.nextInt();
+		System.out.print("Enter Travel Expense:");
+		int travel_expense = sc.nextInt();
+		System.out.print("Enter Food Expense:");
+		int food_expense = sc.nextInt();
+		System.out.print("Enter Logistics Expense:");
+		int logistics_expense = sc.nextInt();
+		System.out.print("Enter Total Expense:");
+		int total_expense = sc.nextInt();
+
+		//logic part
+
+		float brand_expense_percentage=(float)(brand_expense)/(float)(total_expense)*100;
+
+		System.out.printf("Branding Expense: %.2f\n",+brand_expense_percentage);
+
+		float travel_expense_percentage=(float)(travel_expense)/(float)(total_expense)*100;
+		System.out.printf("Travel Expense: %.2f\n",+travel_expense_percentage);
+
+		float food_expense_percentage=(float)(food_expense)/(float)(total_expense)*100;
+
+		System.out.printf("Travel Expense: %.2f\n",+food_expense_percentage);
+
+		float logistics_expense_percentage=(float)(logistics_expense)/(float)(total_expense)*100;
+
+		System.out.printf("Logistics Expense: %.2f\n",+logistics_expense_percentage);
+
+
+
+	}
+
+}
+
