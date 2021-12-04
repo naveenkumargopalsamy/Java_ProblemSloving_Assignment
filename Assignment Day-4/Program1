@@ -1,0 +1,75 @@
+package intellect.naveenkumar.day4;
+
+import java.util.Scanner;
+class ItemType{
+
+String name;
+Double costPerDay;
+Double deposit;
+
+public void setName(String name)
+{
+  this.name = name ;
+  
+ }
+ 
+ public String getName ()
+ {
+  return name;
+  }
+   public void setCostPerDay(Double costPerDay)
+{
+  this.costPerDay = costPerDay ;
+  
+ }
+ 
+ public Double getCostPerDay()
+ {
+  return costPerDay;
+  }
+  
+   public void setdeposit(Double deposit)
+{
+  this.deposit = deposit ;
+  
+ }
+ 
+ public Double getdeposit ()
+ {
+  return deposit;
+  }
+  
+  public void display(){
+	   System.out.println("Item type details");
+	   System.out.println("Name:"+name);
+	   System.out.println("CostPerDay:"+String.format("%.2f",costPerDay));
+	   System.out.println("Deposit:"+String.format("%.2f",deposit));
+	   
+  }
+}
+public class Main{
+	 public static void main(String[] args)
+	 {
+		 String name;
+		 Double costPerDay;
+		 Double deposit;
+		 Scanner in = new Scanner(System.in);
+		 System.out.println("Enter the item type name:");
+		 name = in.nextLine();
+		 System.out.println("Enter the cost per day:");
+		  costPerDay=in.nextDouble();
+		 System.out.println("Enter the deposit:");
+		 deposit=in.nextDouble();
+		 
+		 ItemType item = new ItemType();
+		 item.setName(name);
+		 item.setCostPerDay(costPerDay);
+		 item.setdeposit(deposit);
+		 
+		 item.display();
+		 
+		 
+	 }
+	 
+}
+x

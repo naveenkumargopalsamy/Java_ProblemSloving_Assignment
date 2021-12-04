@@ -1,0 +1,84 @@
+package intellect.naveenkumar.day4;
+
+import java.util.Scanner;
+
+class Addresses {
+	private String addressLine1;
+	private String addressLine2;
+	private String city;
+	private String state;
+	private Integer pincode;
+
+	public String getAddressLine1() {
+		return addressLine1;
+	}
+	public void setAddressLine1(String addressLine1) {
+		this.addressLine1 = addressLine1;
+	}
+	public String getAddressLine2() {
+		return addressLine2;
+	}
+	public void setAddressLine2(String addressLine2) {
+		this.addressLine2 = addressLine2;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
+	public Integer getPincode() {
+		return pincode;
+	}
+	public void setPincode(Integer pincode) {
+		this.pincode = pincode;
+	}
+	public Addresses(){
+
+	}
+	public Addresses(String addressLine1, String addressLine2, String city,String state, Integer pincode){
+		this.addressLine1=addressLine1;
+		this.addressLine2=addressLine2;
+		this.city=city;
+		this.state=state;
+		this.pincode=pincode;
+	}
+	@Override
+	public String toString() {
+		return "Addresses [addressLine1=" + addressLine1 + ", addressLine2=" + addressLine2 + ", city=" + city
+				+ ", state=" + state + ", pincode=" + pincode + "]";
+	}
+
+
+
+}
+
+public class Main {
+	public static void main(String args[]){
+		Addresses add = null;
+		add=new Addresses();
+
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Address Line 1: ");
+		add.setAddressLine1(sc.nextLine());
+		System.out.println("Enter Address Line 2: ");
+		add.setAddressLine2(sc.nextLine());
+		System.out.println("Enter the City Name: ");
+		add.setCity(sc.nextLine());
+		System.out.println("Enter the State Name: ");
+		add.setState(sc.nextLine());
+		System.out.println("Enter the Pincode: ");
+		add.setPincode(sc.nextInt());
+
+
+		System.out.println(add.toString());
+	} 
+
+
+}
